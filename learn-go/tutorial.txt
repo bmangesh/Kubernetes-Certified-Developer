@@ -1,0 +1,3 @@
+What is Go?
+Go (also known as Golang) is an open source programming language developed by Google. It is a statically-typed compiled language. Go supports concurrent programming, i.e. it allows running multiple processes simultaneously. 
+This is achieved using channels, goroutines, etc. Go has garbage collection which itself does the memory management and allows the deferred execution of functions. 
