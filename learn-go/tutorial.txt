@@ -1,3 +1,21 @@
 What is Go?
 Go (also known as Golang) is an open source programming language developed by Google. It is a statically-typed compiled language. Go supports concurrent programming, i.e. it allows running multiple processes simultaneously. 
 This is achieved using channels, goroutines, etc. Go has garbage collection which itself does the memory management and allows the deferred execution of functions. 
+
+Variables:-
+Variables point to a memory location which stores some kind of value. The type parameter(in the below syntax) represents the type of value that can be stored in the memory location.
+
+Variable can be declared using the syntax
+var <variable_name> <type>
+
+Once You declare a variable of a type You can assign the variable to any value of that type.
+
+You can also give an initial value to a variable during the declaration itself using
+
+    var <variable_name> <type> = <value>
+If You declare the variable with an initial value, Go an infer the type of the variable from the type of value assigned. So You can omit the type during the declaration using the syntax
+
+    var <variable_name> = <value>
+Also, You can declare multiple variables with the syntax
+
+    var <variable_name1>, <variable_name2>  = <value1>, <value2>
