@@ -1,0 +1,4 @@
+Error: When I execute :  go mod init github.com/bmangesh/bmangesh/go-redis-k8s-demo
+I get : go: modules disabled inside GOPATH/src by GO111MODULE=auto; see 'go help modules'
+Sol: export GO111MODULE="on"
+Status: Working
