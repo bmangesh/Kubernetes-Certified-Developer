@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: yello
+  name: yello-svc
+spec:
+  ports:
+  - name: yello-port
+    nodePort: 31000
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: yello
+  type: NodePort

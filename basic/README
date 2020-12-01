@@ -1,0 +1,14 @@
+Imperative Command list
+
+GREEN:
+Create Deployment 
+kubectl create deployment --image=nginx green --dry-run=client -o yaml > green-deployment.yaml
+
+Create Service 
+kubectl create svc  nodeport green-svc --node-port=31000 --tcp=80:80  --dry-run=client -o yaml > green-svc.yaml
+
+Create ConfigMap
+kubectl create configmap green-config-map --from-file=green.html --dry-run=client -o yaml
+
+
+

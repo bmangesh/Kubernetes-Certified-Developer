@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: green
+  name: green-svc
+spec:
+  ports:
+  - name: green-port
+#    nodePort: 31000
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: green
+  type: NodePort

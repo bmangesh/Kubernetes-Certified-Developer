@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: yello
+    lang: angularJS
+  name: yello
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yello
+  template:
+    metadata:
+      labels:
+        app: yello
+    spec:
+      containers:
+      - image: nginx
+        name: yello
+        volumeMounts:
+        - name: yellow
+          mountPath: "/usr/share/nginx/html/"
+      volumes:
+       - name: yellow
+         configMap:
+           name: yellow-config-map

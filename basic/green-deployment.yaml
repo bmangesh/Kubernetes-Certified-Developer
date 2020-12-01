@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: green
+    lang: angularJS
+  name: green
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: green
+  template:
+    metadata:
+      labels:
+        app: green
+    spec:
+      containers:
+      - image: nginx
+        name: green
+        volumeMounts:
+        - name: green
+          mountPath: "/usr/share/nginx/html/"
+      volumes:
+      - name: green
+        configMap:
+           name: green-config-map
