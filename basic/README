@@ -12,3 +12,6 @@ kubectl create configmap green-config-map --from-file=green.html --dry-run=clien
 
 
 
+Ingress:
+https://kubernetes.github.io/ingress-nginx/deploy/#bare-metal
+https://kubernetes.github.io/ingress-nginx/troubleshooting/
