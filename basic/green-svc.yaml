@@ -7,7 +7,7 @@ metadata:
 spec:
   ports:
   - name: green-port
-#    nodePort: 31000
+    nodePort: 31001
     port: 80
     protocol: TCP
     targetPort: 80
