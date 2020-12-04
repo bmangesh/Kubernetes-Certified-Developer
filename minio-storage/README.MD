@@ -13,3 +13,5 @@ kubectl set image deploy/minio minio=minio/minio:RELEASE.2020-12-03T05-49-24Z --
 
 2. Expected Scenario User should not able to loss connectivity with minio storage api/UI
 
+3. refer: https://www.bluematador.com/blog/kubernetes-deployments-rolling-update-configuration
+
