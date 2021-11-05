@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: code-server-bmangesh
+  name: code-server-bmangesh
+  namespace: bmangesh
+spec:
+  selector:
+    matchLabels:
+      app: code-server-bmangesh
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: code-server-bmangesh
+    spec:
+      volumes:
+      - name: codeserver-storage-bmangesh
+        persistentVolumeClaim:
+          claimName: codeserver-bmangesh-pvc
+      containers:
+      - image: codercom/code-server:latest
+        imagePullPolicy: Always
+        name: code-server
+        env:
+        - name: PASSWORD
+          value: "ILoveBitCoin"
+        volumeMounts:
+          - name: codeserver-storage-bmangesh
+            mountPath: "/home/coder/data"
