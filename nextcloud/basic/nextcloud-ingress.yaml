@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nextcloud-ingress
+  namespace: nextcloud
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: nextcloud.hellosre.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+             name: nextcloud-ui-svc 
+             port:
+               number: 80
