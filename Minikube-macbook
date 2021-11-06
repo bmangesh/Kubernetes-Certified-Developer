@@ -1,0 +1,7 @@
+The default memory limit is 2GB and the CPU limit is 2
+Use below cmd to change the values
+
+minikube config set cpus 4
+minikube config set memory 16384
+
+Note* please delete old minikube env and start again
