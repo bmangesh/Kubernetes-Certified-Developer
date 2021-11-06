@@ -9,3 +9,6 @@ Note* please delete old minikube env and start again
 Minikube Home Dir
 
 /Users/bmangesh/.minikube/config
+
+k edit svc ingress-nginx-controller -n ingress-nginx    change to LoadBalancer
+k edit  cm config  -n metallb-system   add IP range
