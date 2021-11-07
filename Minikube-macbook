@@ -12,3 +12,9 @@ Minikube Home Dir
 
 k edit svc ingress-nginx-controller -n ingress-nginx    change to LoadBalancer
 k edit  cm config  -n metallb-system   add IP range
+
+
+Start new cluster with multiple nodes
+
+minikube start --nodes 3  --driver=virtualbox -p multinode-minikube
+minikube node add -p multinode-minikube
