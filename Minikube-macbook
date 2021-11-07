@@ -18,3 +18,8 @@ Start new cluster with multiple nodes
 
 minikube start --nodes 3  --driver=virtualbox -p multinode-minikube
 minikube node add -p multinode-minikube
+
+minikube node list  -p multinode-minikube
+
+minikube node [add|start|stop|delete|list]
+
