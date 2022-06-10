@@ -33,4 +33,4 @@ export TERM=xterm-256color
     :helm $namespace
 ## Screenshots
 Namespace
-
+     <img src="asset/k9s-ns.PNG"/>
